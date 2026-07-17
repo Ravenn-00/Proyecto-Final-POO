@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pacientes>
+    <paciente>
+        <idPaciente>P01</idPaciente>
+        <nombre>María Gonzales</nombre>
+        <edad>34</edad>
+        <sexo>F</sexo>
+    </paciente>
+</pacientes>

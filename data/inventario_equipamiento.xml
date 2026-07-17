@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equipamientos>
+    <equipamiento>
+        <codigo>EQP01</codigo>
+        <nombre>Cama UCI</nombre>
+        <stockActual>18</stockActual>
+        <stockMaximo>20</stockMaximo>
+    </equipamiento>
+</equipamientos>

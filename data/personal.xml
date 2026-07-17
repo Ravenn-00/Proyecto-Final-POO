@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personal>
+    <persona tipo="medico">
+        <id>M01</id>
+        <nombre>Dr. Juan Salas</nombre>
+        <especialidad>Cardiología</especialidad>
+        <enTurno>true</enTurno>
+        <usuario>M01</usuario>
+        <contrasena>1234</contrasena>
+        <registroColegio>CMP12345</registroColegio>
+        <costoHora>80.0</costoHora>
+    </persona>
+</personal>
