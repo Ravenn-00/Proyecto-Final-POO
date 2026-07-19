@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <personal>
     <persona tipo="medico">
         <id>M01</id>
@@ -9,5 +9,15 @@
         <contrasena>1234</contrasena>
         <registroColegio>CMP12345</registroColegio>
         <costoHora>80.0</costoHora>
+    </persona>
+    <persona tipo="enfermera">
+        <id>enf</id>
+        <nombre>enf</nombre>
+        <especialidad>General</especialidad>
+        <enTurno>false</enTurno>
+        <usuario>enf</usuario>
+        <contrasena>123</contrasena>
+        <areaAsignada/>
+        <nivelTriage>0</nivelTriage>
     </persona>
 </personal>

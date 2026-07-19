@@ -11,7 +11,23 @@ package pe.utp.emergencias.vista;
 public class FormularioPrincipal extends javax.swing.JFrame {
 
     public FormularioPrincipal() {
+        this("Administrador");
+    }
+
+    public FormularioPrincipal(String rol) {
         initComponents();
+        if (rol.equals("Enfermería")) {
+            btnInsumos.setVisible(false);
+            btnAnalitica.setVisible(false);
+        } else if (rol.equals("Médico")) {
+            btnTurnos.setVisible(false);
+            btnInsumos.setVisible(false);
+            btnAnalitica.setVisible(false);
+        } else if (rol.equals("Farmacia")) {
+            btnTriage.setVisible(false);
+            btnTurnos.setVisible(false);
+            btnAnalitica.setVisible(false);
+        }
     }
 
     @SuppressWarnings("unchecked")

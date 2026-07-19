@@ -124,7 +124,7 @@ public class FormularioLogin extends javax.swing.JFrame {
 
         if (rol.equals("Farmacia")) {
             if (usuario.equals(FARMACIA_USUARIO) && contrasena.equals(FARMACIA_CLAVE)) {
-                new FormularioPrincipal().setVisible(true);
+                new FormularioPrincipal(rol).setVisible(true);
                 dispose();
             }
             return;
@@ -134,12 +134,12 @@ public class FormularioLogin extends javax.swing.JFrame {
         for (pe.utp.emergencias.modelo.PersonalMedico persona : repositorio.listar()) {
             if (persona.getUsuario().equals(usuario) && persona.getContrasena().equals(contrasena)) {
                 if (rol.equals("Médico") && persona instanceof pe.utp.emergencias.modelo.MedicoEspecialista) {
-                    new FormularioPrincipal().setVisible(true);
+                    new FormularioPrincipal(rol).setVisible(true);
                     dispose();
                     return;
                 }
                 if (rol.equals("Enfermería") && persona instanceof pe.utp.emergencias.modelo.PersonalEnfermeria) {
-                    new FormularioPrincipal().setVisible(true);
+                    new FormularioPrincipal(rol).setVisible(true);
                     dispose();
                     return;
                 }
