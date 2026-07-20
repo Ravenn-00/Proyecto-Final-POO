@@ -15,6 +15,8 @@ public class FormularioLogin extends javax.swing.JFrame {
 
     public FormularioLogin() {
         initComponents();
+        setSize(650, 480);
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -33,9 +35,12 @@ public class FormularioLogin extends javax.swing.JFrame {
         btnAccesoLibre = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(245, 247, 250));
         setTitle("Ingreso al Sistema");
+        getContentPane().setBackground(new java.awt.Color(245, 247, 250));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 16));
+        jLabel1.setForeground(new java.awt.Color(30, 58, 95));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Sistema de Gestión de Emergencias");
 
@@ -47,21 +52,33 @@ public class FormularioLogin extends javax.swing.JFrame {
 
         jLabel4.setText("Contraseña:");
 
+        btnIngresar.setBackground(new java.awt.Color(37, 99, 235));
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
         btnIngresar.setText("Ingresar");
+        btnIngresar.setBorderPainted(false);
+        btnIngresar.setFocusPainted(false);
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarActionPerformed(evt);
             }
         });
 
+        btnRegistrar.setBackground(new java.awt.Color(37, 99, 235));
+        btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistrar.setText("Registrar");
+        btnRegistrar.setBorderPainted(false);
+        btnRegistrar.setFocusPainted(false);
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
             }
         });
 
+        btnAccesoLibre.setBackground(new java.awt.Color(37, 99, 235));
+        btnAccesoLibre.setForeground(new java.awt.Color(255, 255, 255));
         btnAccesoLibre.setText("Acceso Libre (Administrador)");
+        btnAccesoLibre.setBorderPainted(false);
+        btnAccesoLibre.setFocusPainted(false);
         btnAccesoLibre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAccesoLibreActionPerformed(evt);

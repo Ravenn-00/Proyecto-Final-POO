@@ -14,6 +14,8 @@ public class FormularioTurnos extends javax.swing.JFrame {
 
     public FormularioTurnos() {
         initComponents();
+        setSize(650, 480);
+        setLocationRelativeTo(null);
         refrescarTabla();
     }
 
@@ -44,9 +46,12 @@ public class FormularioTurnos extends javax.swing.JFrame {
         tblPersonal = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(245, 247, 250));
         setTitle("Asignación y Turnos");
+        getContentPane().setBackground(new java.awt.Color(245, 247, 250));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 16));
+        jLabel1.setForeground(new java.awt.Color(30, 58, 95));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Asignación y Turnos");
 
@@ -67,35 +72,55 @@ public class FormularioTurnos extends javax.swing.JFrame {
 
         jLabel6.setText("Costo Hora / Nivel Triage:");
 
+        btnNuevo.setBackground(new java.awt.Color(37, 99, 235));
+        btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
         btnNuevo.setText("Nuevo");
+        btnNuevo.setBorderPainted(false);
+        btnNuevo.setFocusPainted(false);
         btnNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoActionPerformed(evt);
             }
         });
 
+        btnGrabar.setBackground(new java.awt.Color(37, 99, 235));
+        btnGrabar.setForeground(new java.awt.Color(255, 255, 255));
         btnGrabar.setText("Grabar");
+        btnGrabar.setBorderPainted(false);
+        btnGrabar.setFocusPainted(false);
         btnGrabar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGrabarActionPerformed(evt);
             }
         });
 
+        btnEliminar.setBackground(new java.awt.Color(37, 99, 235));
+        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminar.setText("Eliminar");
+        btnEliminar.setBorderPainted(false);
+        btnEliminar.setFocusPainted(false);
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
             }
         });
 
+        btnIngreso.setBackground(new java.awt.Color(37, 99, 235));
+        btnIngreso.setForeground(new java.awt.Color(255, 255, 255));
         btnIngreso.setText("Marcar Ingreso");
+        btnIngreso.setBorderPainted(false);
+        btnIngreso.setFocusPainted(false);
         btnIngreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresoActionPerformed(evt);
             }
         });
 
+        btnSalida.setBackground(new java.awt.Color(37, 99, 235));
+        btnSalida.setForeground(new java.awt.Color(255, 255, 255));
         btnSalida.setText("Marcar Salida");
+        btnSalida.setBorderPainted(false);
+        btnSalida.setFocusPainted(false);
         btnSalida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalidaActionPerformed(evt);

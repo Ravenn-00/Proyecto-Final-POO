@@ -12,6 +12,8 @@ public class FormularioInsumos extends javax.swing.JFrame {
 
     public FormularioInsumos() {
         initComponents();
+        setSize(650, 480);
+        setLocationRelativeTo(null);
         refrescarTabla();
     }
 
@@ -38,9 +40,12 @@ public class FormularioInsumos extends javax.swing.JFrame {
         tblInsumos = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(245, 247, 250));
         setTitle("Control de Insumos Críticos");
+        getContentPane().setBackground(new java.awt.Color(245, 247, 250));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 16));
+        jLabel1.setForeground(new java.awt.Color(30, 58, 95));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Control de Insumos Críticos");
 
@@ -59,21 +64,33 @@ public class FormularioInsumos extends javax.swing.JFrame {
 
         jLabel5.setText("Stock Máximo:");
 
+        btnAumentarStock.setBackground(new java.awt.Color(37, 99, 235));
+        btnAumentarStock.setForeground(new java.awt.Color(255, 255, 255));
         btnAumentarStock.setText("Aumentar Stock");
+        btnAumentarStock.setBorderPainted(false);
+        btnAumentarStock.setFocusPainted(false);
         btnAumentarStock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAumentarStockActionPerformed(evt);
             }
         });
 
+        btnReducirStock.setBackground(new java.awt.Color(37, 99, 235));
+        btnReducirStock.setForeground(new java.awt.Color(255, 255, 255));
         btnReducirStock.setText("Reducir Stock");
+        btnReducirStock.setBorderPainted(false);
+        btnReducirStock.setFocusPainted(false);
         btnReducirStock.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReducirStockActionPerformed(evt);
             }
         });
 
+        btnFiltrarMinimo.setBackground(new java.awt.Color(37, 99, 235));
+        btnFiltrarMinimo.setForeground(new java.awt.Color(255, 255, 255));
         btnFiltrarMinimo.setText("Ver Stock Mínimo");
+        btnFiltrarMinimo.setBorderPainted(false);
+        btnFiltrarMinimo.setFocusPainted(false);
         btnFiltrarMinimo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFiltrarMinimoActionPerformed(evt);
@@ -88,6 +105,11 @@ public class FormularioInsumos extends javax.swing.JFrame {
                 "Código", "Nombre", "Actual", "Máximo", "Estado"
             }
         ));
+        tblInsumos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblInsumosMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblInsumos);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -176,6 +198,17 @@ public class FormularioInsumos extends javax.swing.JFrame {
         }
     }
 
+    private void tblInsumosMouseClicked(java.awt.event.MouseEvent evt) {
+        int fila = tblInsumos.getSelectedRow();
+        if (fila < 0) {
+            return;
+        }
+        javax.swing.table.DefaultTableModel modeloTabla = (javax.swing.table.DefaultTableModel) tblInsumos.getModel();
+        txtCodigo.setText((String) modeloTabla.getValueAt(fila, 0));
+        txtNombre.setText((String) modeloTabla.getValueAt(fila, 1));
+        txtStockMaximo.setText(String.valueOf(modeloTabla.getValueAt(fila, 3)));
+    }
+
     private void refrescarTabla() {
         if (rbtMedicamento.isSelected()) {
             cargarTabla(new pe.utp.emergencias.persistencia.MedicamentoRepository().listar());
@@ -222,7 +255,10 @@ public class FormularioInsumos extends javax.swing.JFrame {
 
     private void btnReducirStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReducirStockActionPerformed
         String codigo = txtCodigo.getText().trim();
-        int cantidad = Integer.parseInt(txtCantidad.getText().trim());
+        if (codigo.isEmpty()) {
+            return;
+        }
+        int cantidad = 1;
         pe.utp.emergencias.servicio.SistemaAlmacen almacen = new pe.utp.emergencias.servicio.SistemaAlmacen();
 
         if (rbtMedicamento.isSelected()) {

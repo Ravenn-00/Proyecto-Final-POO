@@ -16,6 +16,8 @@ public class FormularioPrincipal extends javax.swing.JFrame {
 
     public FormularioPrincipal(String rol) {
         initComponents();
+        setSize(650, 480);
+        setLocationRelativeTo(null);
         if (rol.equals("Enfermería")) {
             btnInsumos.setVisible(false);
             btnAnalitica.setVisible(false);
@@ -41,12 +43,18 @@ public class FormularioPrincipal extends javax.swing.JFrame {
         btnAnalitica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(245, 247, 250));
+        getContentPane().setBackground(new java.awt.Color(245, 247, 250));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(30, 58, 95));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Sistema de Gestión de Emergencias");
 
+        btnTriage.setBackground(new java.awt.Color(37, 99, 235));
+        btnTriage.setForeground(new java.awt.Color(255, 255, 255));
         btnTriage.setText("Admisión y Triage");
+        btnTriage.setBorderPainted(false);
         btnTriage.setFocusPainted(false);
         btnTriage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,7 +62,10 @@ public class FormularioPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnTurnos.setBackground(new java.awt.Color(37, 99, 235));
+        btnTurnos.setForeground(new java.awt.Color(255, 255, 255));
         btnTurnos.setText("Asignación y Turnos");
+        btnTurnos.setBorderPainted(false);
         btnTurnos.setFocusPainted(false);
         btnTurnos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,7 +73,10 @@ public class FormularioPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnInsumos.setBackground(new java.awt.Color(37, 99, 235));
+        btnInsumos.setForeground(new java.awt.Color(255, 255, 255));
         btnInsumos.setText("Control de Insumos Críticos");
+        btnInsumos.setBorderPainted(false);
         btnInsumos.setFocusPainted(false);
         btnInsumos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +84,10 @@ public class FormularioPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnAnalitica.setBackground(new java.awt.Color(37, 99, 235));
+        btnAnalitica.setForeground(new java.awt.Color(255, 255, 255));
         btnAnalitica.setText("Analítica y Cierre de Turno");
+        btnAnalitica.setBorderPainted(false);
         btnAnalitica.setFocusPainted(false);
         btnAnalitica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,11 +102,11 @@ public class FormularioPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnTriage, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnTurnos, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnInsumos, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAnalitica, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                    .addComponent(btnTriage, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                    .addComponent(btnTurnos, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                    .addComponent(btnInsumos, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                    .addComponent(btnAnalitica, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

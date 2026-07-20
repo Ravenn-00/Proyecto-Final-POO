@@ -1,9 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <medicamentos>
     <medicamento>
         <codigo>MED01</codigo>
         <nombre>Paracetamol</nombre>
-        <stockActual>40</stockActual>
+        <stockActual>39</stockActual>
         <stockMaximo>50</stockMaximo>
+    </medicamento>
+    <medicamento>
+        <codigo>MED02</codigo>
+        <nombre>Alcohol</nombre>
+        <stockActual>14</stockActual>
+        <stockMaximo>20</stockMaximo>
     </medicamento>
 </medicamentos>

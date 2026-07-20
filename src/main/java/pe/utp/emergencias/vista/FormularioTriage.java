@@ -17,6 +17,8 @@ public class FormularioTriage extends javax.swing.JFrame {
 
     public FormularioTriage() {
         initComponents();
+        setSize(650, 480);
+        setLocationRelativeTo(null);
         refrescarTabla();
     }
 
@@ -42,9 +44,12 @@ public class FormularioTriage extends javax.swing.JFrame {
         tblColaEspera = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(245, 247, 250));
         setTitle("Admisión y Triage");
+        getContentPane().setBackground(new java.awt.Color(245, 247, 250));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 16));
+        jLabel1.setForeground(new java.awt.Color(30, 58, 95));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Admisión y Triage");
 
@@ -62,21 +67,33 @@ public class FormularioTriage extends javax.swing.JFrame {
 
         cbxNivelTriage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5" }));
 
+        btnRegistrar.setBackground(new java.awt.Color(37, 99, 235));
+        btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistrar.setText("Registrar y Encolar");
+        btnRegistrar.setBorderPainted(false);
+        btnRegistrar.setFocusPainted(false);
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
             }
         });
 
+        btnLlamarSiguiente.setBackground(new java.awt.Color(37, 99, 235));
+        btnLlamarSiguiente.setForeground(new java.awt.Color(255, 255, 255));
         btnLlamarSiguiente.setText("Atender Siguiente");
+        btnLlamarSiguiente.setBorderPainted(false);
+        btnLlamarSiguiente.setFocusPainted(false);
         btnLlamarSiguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLlamarSiguienteActionPerformed(evt);
             }
         });
 
+        btnActualizarPaciente.setBackground(new java.awt.Color(37, 99, 235));
+        btnActualizarPaciente.setForeground(new java.awt.Color(255, 255, 255));
         btnActualizarPaciente.setText("Actualizar Paciente");
+        btnActualizarPaciente.setBorderPainted(false);
+        btnActualizarPaciente.setFocusPainted(false);
         btnActualizarPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarPacienteActionPerformed(evt);

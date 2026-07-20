@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <personal>
     <persona tipo="medico">
-        <id>M01</id>
+        <id>D-3</id>
+        <nombre>Jose</nombre>
+        <especialidad>Cardiologia</especialidad>
+        <enTurno>false</enTurno>
+        <usuario/>
+        <contrasena/>
+        <registroColegio>c-02202</registroColegio>
+        <costoHora>60.0</costoHora>
+    </persona>
+    <persona tipo="enfermera">
+        <id>E-4</id>
+        <nombre>Carla</nombre>
+        <especialidad>General</especialidad>
+        <enTurno>false</enTurno>
+        <usuario/>
+        <contrasena/>
+        <areaAsignada>c-04242</areaAsignada>
+        <nivelTriage>0</nivelTriage>
+    </persona>
+    <persona tipo="medico">
+        <id>D-2</id>
         <nombre>Dr. Juan Salas</nombre>
         <especialidad>Cardiología</especialidad>
-        <enTurno>true</enTurno>
-        <usuario>M01</usuario>
-        <contrasena>1234</contrasena>
+        <enTurno>false</enTurno>
+        <usuario/>
+        <contrasena/>
         <registroColegio>CMP12345</registroColegio>
         <costoHora>80.0</costoHora>
     </persona>

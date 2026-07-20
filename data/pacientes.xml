@@ -1,9 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pacientes>
     <paciente>
         <idPaciente>P01</idPaciente>
         <nombre>María Gonzales</nombre>
         <edad>34</edad>
+        <sexo>F</sexo>
+    </paciente>
+    <paciente>
+        <idPaciente>P-0111</idPaciente>
+        <nombre>Pepe</nombre>
+        <edad>44</edad>
+        <sexo>M</sexo>
+    </paciente>
+    <paciente>
+        <idPaciente>P-2</idPaciente>
+        <nombre>Lucho</nombre>
+        <edad>21</edad>
+        <sexo>M</sexo>
+    </paciente>
+    <paciente>
+        <idPaciente>P-4</idPaciente>
+        <nombre>Maria</nombre>
+        <edad>33</edad>
         <sexo>F</sexo>
     </paciente>
 </pacientes>

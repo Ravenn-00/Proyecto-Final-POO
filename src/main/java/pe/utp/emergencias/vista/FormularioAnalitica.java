@@ -12,6 +12,8 @@ public class FormularioAnalitica extends javax.swing.JFrame {
 
     public FormularioAnalitica() {
         initComponents();
+        setSize(650, 480);
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -25,15 +27,22 @@ public class FormularioAnalitica extends javax.swing.JFrame {
         tblResultados = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(245, 247, 250));
         setTitle("Analítica y Cierre de Turno");
+        getContentPane().setBackground(new java.awt.Color(245, 247, 250));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 16));
+        jLabel1.setForeground(new java.awt.Color(30, 58, 95));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Analítica y Cierre de Turno");
 
         cbxReporte.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ocupación UCI", "Balance de Carga Laboral", "Ocupación por Especialidad" }));
 
+        btnGenerar.setBackground(new java.awt.Color(37, 99, 235));
+        btnGenerar.setForeground(new java.awt.Color(255, 255, 255));
         btnGenerar.setText("Generar");
+        btnGenerar.setBorderPainted(false);
+        btnGenerar.setFocusPainted(false);
         btnGenerar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGenerarActionPerformed(evt);
@@ -91,8 +100,9 @@ public class FormularioAnalitica extends javax.swing.JFrame {
         java.util.List<pe.utp.emergencias.modelo.PersonalMedico> personal = repositorio.listar();
 
         if (reporte.equals("Ocupación UCI")) {
+            pe.utp.emergencias.persistencia.UciRepository uciRepositorio = new pe.utp.emergencias.persistencia.UciRepository();
             pe.utp.emergencias.servicio.MonitorUCI monitor = new pe.utp.emergencias.servicio.MonitorUCI();
-            monitor.monitorearCamas(18, 20);
+            monitor.monitorearCamas(uciRepositorio.getCamasOcupadas(), uciRepositorio.getCamasTotales());
             modeloTabla.addRow(new Object[]{"Ocupación UCI", (monitor.getPorcentajeOcupacionUCI() * 100) + "%"});
 
         } else if (reporte.equals("Balance de Carga Laboral")) {
