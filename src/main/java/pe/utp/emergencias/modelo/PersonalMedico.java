@@ -31,10 +31,6 @@ public class PersonalMedico {
         this.enTurno = false;
     }
 
-    public boolean estaDisponible() {
-        return enTurno;
-    }
-
     public String getId() {
         return id;
     }

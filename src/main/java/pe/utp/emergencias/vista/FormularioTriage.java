@@ -213,7 +213,6 @@ public class FormularioTriage extends javax.swing.JFrame {
         paciente.registrarAtencion(atencion);
 
         pe.utp.emergencias.modelo.PersonalEnfermeria enfermeria = new pe.utp.emergencias.modelo.PersonalEnfermeria();
-        enfermeria.calcularTriage(atencion);
         enfermeria.asignarColaEspera(atencion, colaEspera);
 
         if (nivelTriage == 1) {

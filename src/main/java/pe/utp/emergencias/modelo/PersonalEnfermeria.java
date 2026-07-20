@@ -1,6 +1,6 @@
 /*
  * @author Reynoso Benavente Gastón, Huamantuco Cosi Jairo Mauricio
- * Clase PersonalEnfermeria, registra pacientes, calcula el triage y actualiza la cola de espera.
+ * Clase PersonalEnfermeria, encola pacientes y actualiza su posición en la cola de espera.
  */
 package pe.utp.emergencias.modelo;
 
@@ -20,13 +20,6 @@ public class PersonalEnfermeria extends PersonalMedico {
         super(id, nombre, especialidad);
         this.areaAsignada = areaAsignada;
         this.nivelTriage = nivelTriage;
-    }
-
-    public void registrarPaciente(Paciente paciente) {
-    }
-
-    public void calcularTriage(Atencion atencion) {
-        atencion.calcularPrioridadAtencion();
     }
 
     public void asignarColaEspera(Atencion atencion, PriorityQueue<Atencion> colaEspera) {

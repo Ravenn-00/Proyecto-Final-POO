@@ -11,8 +11,6 @@ public abstract class Atencion implements Comparable<Atencion> {
     private String idAtencion;
     private Paciente paciente;
     private String estado;
-    private String diagnostico;
-    private String receta;
     private final int orden;
 
     protected Atencion() {
@@ -56,25 +54,5 @@ public abstract class Atencion implements Comparable<Atencion> {
 
     public String getEstado() {
         return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public String getDiagnostico() {
-        return diagnostico;
-    }
-
-    public void setDiagnostico(String diagnostico) {
-        this.diagnostico = diagnostico;
-    }
-
-    public String getReceta() {
-        return receta;
-    }
-
-    public void setReceta(String receta) {
-        this.receta = receta;
     }
 }

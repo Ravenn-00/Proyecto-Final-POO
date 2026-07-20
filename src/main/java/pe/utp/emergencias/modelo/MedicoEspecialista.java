@@ -1,6 +1,6 @@
 /*
  * @author Reynoso Benavente Gastón, Huamantuco Cosi Jairo Mauricio
- * Clase MedicoEspecialista, atiende pacientes de la cola y registra diagnóstico y receta.
+ * Clase MedicoEspecialista, atiende al siguiente paciente de la cola de espera.
  */
 package pe.utp.emergencias.modelo;
 
@@ -24,15 +24,6 @@ public class MedicoEspecialista extends PersonalMedico {
 
     public Atencion llamarSiguientePaciente(PriorityQueue<Atencion> colaEspera) {
         return colaEspera.poll();
-    }
-
-    public void registrarDiagnostico(Atencion atencion, String diagnostico, String receta) {
-        atencion.setDiagnostico(diagnostico);
-        atencion.setReceta(receta);
-        atencion.setEstado("Atendido");
-    }
-
-    public void solicitarInsumo(String codigoInsumo, int cantidad) {
     }
 
     public String getRegistroColegio() {
